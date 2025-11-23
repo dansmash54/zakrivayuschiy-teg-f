@@ -13,4 +13,230 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  background-color: var(--background-color);
+  background-image: var(--background-gradient);
+  background-attachment: fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* header */
+
+.header {
+  display: flex;
+  background-color: white;
+  block-size: 368px;
+  box-shadow: inset 0 0 0 1px #000;
+  margin-block: 100px;
+  margin: 100px auto;
+  max-inline-size: 700px;
+  inline-size: var(--content-width);
+  justify-content: center;
+  align-items: center;
+}
+
+.header__content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-self: center;
+  gap: 20px;
+  text-transform: uppercase;
+  font-family: var(--accent-font);
+  padding: 8px 16px;
+}
+
+.header__title {
+  font-size: var(--header__title-size);
+}
+
+.header__subtitle {
+  font-size: var(--header__subtitle-size);
+}
+/* cards */
+.cards {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 50px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  inline-size: var(--content-width);
+  border: 2px solid var(--accent-color);
+}
+
+.card__title {
+  margin: 0;
+  font-family: var(--main-font);
+  font-variation-settings: "wght" var(--title-font-weight);
+  font-size: 18px;
+  line-height: 1.2;
+  padding: 5px 10px;
+  border-bottom: 2px solid var(--accent-color);
+}
+
+.card__image {
+  position: relative;
+  block-size: var(--content-width);
+  background-image: url("/images/image.png");
+  background-size: cover;
+  background-position: right;
+  border-bottom: 2px solid var(--accent-color);
+}
+
+.card__label {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  margin: 0;
+  font-family: var(--accent-font);
+  font-size: 14px;
+  color: var(--accent-color);
+  opacity: 0.5;
+  mix-blend-mode: hard-light;
+  -webkit-text-stroke: 1px var(--text-stroke-color);
+  text-stroke: 1px var(--text-stroke-color);
+}
+
+/* Фолбэк для браузеров без поддержки text-stroke */
+@supports not ((text-stroke: 1px #fff) or (-webkit-text-stroke: 1px #fff)) {
+  .card__label {
+    color: #000000;
+    text-shadow: 1px 1px 0 #ffffff, -1px -1px 0 #ffffff, -1px 1px 0 #ffffff,
+      1px -1px 0 #ffffff;
+  }
+}
+
+.card__description {
+  margin: 20px 25px 25px 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.card__text {
+  font-family: var(--main-font);
+  font-variation-settings: "wght" var(--main-font-weight);
+  font-size: 18px;
+  margin: 0;
+}
+
+/* Контейнер для кнопок */
+.buttons {
+  align-self: flex-end;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.card__icon-button {
+  border: none;
+  background-color: transparent;
+  block-size: min-content;
+  padding: 0;
+  cursor: pointer;
+}
+
+.card__like-button {
+  border: 2px solid var(--accent-color);
+  background-color: transparent;
+  line-height: 90%;
+  block-size: 38px;
+  inline-size: 130px;
+  font-family: var(--accent-font);
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* кнопка сохранить */
+
+.footer {
+  margin-bottom: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.button_type_save {
+  border: 2px solid var(--accent-color);
+  background-color: white;
+  line-height: 90%;
+  block-size: 55px;
+  inline-size: 335px;
+  font-family: var(--accent-font);
+  font-size: 14px;
+  cursor: pointer;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+/* диалог */
+
+.dialog {
+  padding: 0;
+  border: 2px solid var(--accent-color);
+  background-color: white;
+  max-inline-size: 357px;
+  inline-size: 100%;
+  margin: auto;
+}
+
+.dialog::backdrop {
+  backdrop-filter: brightness(75%);
+}
+
+.dialog__content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 30px;
+}
+
+.dialog__text {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Стили для иконки дискеты  */
+.dialog__text svg {
+  inline-size: 39px;
+  block-size: 39px;
+  flex-shrink: 0;
+}
+
+.dialog__title {
+  font-family: var(--accent-font);
+  font-size: 14px;
+  margin: 0;
+  text-transform: uppercase;
+  color: var(--accent-color);
+}
+
+.button_type_ok {
+  border: 2px solid var(--accent-color);
+  background-color: white;
+  inline-size: 100%;
+  block-size: 38px;
+  font-family: var(--accent-font);
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.button_type_ok .button__text {
+  color: var(--accent-color);
+}
+
+@media (width <= 375px) {
 }
