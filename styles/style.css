@@ -163,7 +163,7 @@
 
 .button_type_save {
   border: 2px solid var(--accent-color);
-  background-color: white;
+  background-color: var(--background-color);
   line-height: 90%;
   block-size: 55px;
   inline-size: 335px;
@@ -175,6 +175,12 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
+  white-space: nowrap;
+}
+
+.floppy-icon {
+  flex-shrink: 0;
+  display: block;
 }
 
 /* диалог */
@@ -202,7 +208,9 @@
 .dialog__text {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 20px;
+  block-size: 63px;
+  inline-size: 293px;
 }
 
 /* Стили для иконки дискеты  */
@@ -218,6 +226,7 @@
   margin: 0;
   text-transform: uppercase;
   color: var(--accent-color);
+  line-height: 1.5;
 }
 
 .button_type_ok {
