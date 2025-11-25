@@ -10,7 +10,6 @@
 
 body {
   margin: 0;
-  font-family: var(--main-font);
 }
 
 h1,
@@ -36,9 +35,6 @@ input {
   color: currentColor;
   font-family: inherit;
   font-size: inherit;
-  background: transparent;
-  border: none;
-  cursor: pointer;
 }
 
 ul,
