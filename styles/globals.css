@@ -51,3 +51,8 @@ ol {
   clip-path: inset(50%);
   white-space: nowrap;
 }
+
+/* резиновые блоки */
+.block-size {
+  inline-size: var(--content-width);
+}
