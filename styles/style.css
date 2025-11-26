@@ -318,7 +318,7 @@
   }
 }
 
-/* картинки и филтры */
+/* картинки и фильтры */
 .card__image {
   position: relative;
   block-size: clamp(23.3125rem, 16.1602rem + 30.5164vw, 43.625rem);
