@@ -151,6 +151,8 @@
   font-weight: var(--font-weight-text);
   font-size: 13px;
   letter-spacing: 1px;
+  mix-blend-mode: difference;
+  color: var(--floppy-color);
 }
 
 .button {
@@ -161,11 +163,6 @@
   border: 2px solid var(--themes-main-color);
   background-color: var(--background-color);
   transition: 0.3s ease;
-}
-
-.button__text {
-  mix-blend-mode: difference;
-  color: var(--floppy-color);
 }
 
 .button_type_save {
@@ -297,11 +294,6 @@
 
   .floppy-button {
     inline-size: 28px;
-  }
-
-  .button_type_ok {
-    inline-size: 261px;
-    block-size: 38px;
   }
 }
 
