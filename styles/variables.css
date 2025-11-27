@@ -18,7 +18,7 @@
 
   /* fonts */
   --main-font-family: "Inter", sans-serif;
-  --accent-font-family: "PressStart2P", sans-serif;
+  --accent-font-family: "PressStart2P", fantasy;
 
   /* sizes */
   --content-width: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem);

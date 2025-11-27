@@ -33,7 +33,7 @@
             <img
               class="card__image-size filter-interest"
               src="./images/card1.png"
-              alt="cat and pc"
+              alt="котик с компьютером"
             />
             <p class="card__label">&lt;Интерес&gt;</p>
           </div>
@@ -89,7 +89,7 @@
             <img
               class="card__image-size filter-excitement"
               src="./images/card2.png"
-              alt="surprised cat"
+              alt="удивленный котик"
             />
             <p class="card__label">&lt;Азарт&gt;</p>
           </div>
@@ -147,7 +147,7 @@
             <img
               class="card__image-size filter-shock"
               src="./images/card3.png"
-              alt="negative cat"
+              alt="негативный котик"
             />
             <p class="card__label">&lt;ШОК&gt;</p>
           </div>
@@ -203,7 +203,7 @@
             <img
               class="card__image-size filter-sadness"
               src="./images/card4.png"
-              alt="sad cat"
+              alt="грустный котик"
             />
             <p class="card__label">&lt;Грусть&gt;</p>
           </div>
@@ -261,7 +261,7 @@
             <img
               class="card__image-size filter-team"
               src="./images/card5.png"
-              alt="cat and dog"
+              alt="котик с собакой"
             />
             <p class="card__label">&lt;Команда&gt;</p>
           </div>
@@ -320,7 +320,7 @@
             <img
               class="card__image-size filter-surprise"
               src="./images/card6.png"
-              alt="lovely cat"
+              alt="любовный котик"
             />
             <p class="card__label">&lt;ОКАК&gt;</p>
           </div>
@@ -377,7 +377,7 @@
             <img
               class="card__image-size filter-anger"
               src="./images/card7.png"
-              alt="angry cat"
+              alt="злой котик"
             />
             <p class="card__label">&lt;Злость&gt;</p>
           </div>
@@ -435,7 +435,7 @@
             <img
               class="card__image-size"
               src="./images/card8.png"
-              alt="cat with money"
+              alt="котик с деньгами"
             />
             <p class="card__label">&lt;Like a BOSS&gt;</p>
           </div>
@@ -487,22 +487,32 @@
           </div>
         </article>
       </div>
+      <div class="button-container">
+        <button
+          class="button button_type_save"
+          type="button"
+          onclick="window['save-dialog'].showModal()"
+        >
+          <svg class="floppy-button" width="39" height="39" viewBox="0 0 39 39">
+            <use href="./svg/floppy.svg#icon-floppy"></use>
+          </svg>
+          <span class="button__text">Сохранить на память</span>
+        </button>
+      </div>
     </main>
     <!-- save -->
-    <footer>
+    <!-- <footer>
       <button
         class="button button_type_save"
         type="button"
         onclick="window['save-dialog'].showModal()"
       >
-        <div class="save-style">
-          <svg class="floppy-button" width="39" height="39" viewBox="0 0 39 39">
-            <use href="./svg/floppy.svg#icon-floppy"></use>
-          </svg>
-          <span class="button__text">Сохранить на память</span>
-        </div>
+        <svg class="floppy-button" width="39" height="39" viewBox="0 0 39 39">
+          <use href="./svg/floppy.svg#icon-floppy"></use>
+        </svg>
+        <span class="button__text">Сохранить на память</span>
       </button>
-    </footer>
+    </footer> -->
     <!-- dialog -->
     <dialog class="dialog" id="save-dialog">
       <div class="dialog__content">

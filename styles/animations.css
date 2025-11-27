@@ -101,12 +101,14 @@
 }
 
 /* Анимация кнопок */
+/* Анимация кнопок */
 .card__icon-button {
   transition: border-color 0.3s ease;
 }
 
 .card__icon-button:focus-visible {
-  border: 2px solid var(--themes-main-color);
+  border-color: var(--themes-main-color);
+  outline: none;
 }
 
 .button {
