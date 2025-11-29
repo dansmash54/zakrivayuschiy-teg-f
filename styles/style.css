@@ -90,19 +90,26 @@
   color: var(--themes-main-color);
   opacity: 50%;
   mix-blend-mode: hard-light;
-
-  text-shadow: -1px -1px 0 var(--background-color),
-    1px -1px 0 var(--background-color), -1px 1px 0 var(--background-color),
-    1px 1px 0 var(--background-color);
 }
 
-/* browsers */
-@supports not (
-  (text-stroke: 1px var(--background-color)) or
-    (-webkit-text-stroke: 1px var(--background-color))
+/* Основная директива для браузеров с поддержкой text-stroke */
+@supports (
+  (-webkit-text-stroke: 1px var(--background-color)) or
+    (text-stroke: 1px var(--background-color))
 ) {
   .card__label {
-    color: var(--themes-main-color);
+    -webkit-text-stroke: 1px var(--background-color);
+    text-stroke: 1px var(--background-color);
+    text-shadow: none;
+  }
+}
+
+/*  без поддержки text-stroke */
+@supports not (
+  (-webkit-text-stroke: 1px var(--background-color)) or
+    (text-stroke: 1px var(--background-color))
+) {
+  .card__label {
     text-shadow: 1px 1px 0 var(--background-color),
       -1px -1px 0 var(--background-color), -1px 1px 0 var(--background-color),
       1px -1px 0 var(--background-color);
@@ -161,6 +168,7 @@
   align-items: center;
   justify-content: center;
   padding-top: 50px;
+  padding-bottom: 100px;
 }
 
 .button__text {
@@ -290,9 +298,9 @@
     margin-block-end: 101px;
   }
 
-  .inline-size {
+  /* .inline-size {
     inline-size: 375px;
-  }
+  } */
 
   .button_type_save {
     flex-direction: column;
